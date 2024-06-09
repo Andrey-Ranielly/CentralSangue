@@ -33,6 +33,11 @@ const teamMembers = [
     linkedin: 'https://www.linkedin.com/in/adrielle-mendes/',
     photo: AdrielleFoto
   },
+    {
+    name: 'Pedro Miguel Cavalcanti',
+    github: 'https://github.com/PedroMiguel-Cavalcanti',
+    photo: PedroFoto
+  },
 ];
 
 const About = () => {
