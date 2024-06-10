@@ -13,7 +13,15 @@ function Register() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (email && cpf && password && confirmPassword && password === confirmPassword) {
-      // Lógica de registro aqui
+      console.log(
+        email,password,cpf);
+    console.log("Envio");
+    {
+      fetch("http://localhost:8080/user",{method:"post",headers:{"Content-Type":"application/json"},body:JSON.stringify(email:email,cpf:cpf,senha:password)})
+    }
+
+    alert("Conta criada com sucesso, retorne a pagina de login para entrar no aplicativo");
+  };
       navigate('/home');
     } else {
       alert('Por favor, preencha todos os campos corretamente.');
