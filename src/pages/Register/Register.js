@@ -13,15 +13,7 @@ function Register() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (email && cpf && password && confirmPassword && password === confirmPassword) {
-      console.log(
-        email,password,cpf);
-    console.log("Envio");
-    {
-      fetch("http://localhost:8080/user",{method:"post",headers:{"Content-Type":"application/json"},body:JSON.stringify(email:email,cpf:cpf,senha:password)})
-    }
-
-    alert("Conta criada com sucesso, retorne a pagina de login para entrar no aplicativo");
-  };
+      // Lógica de registro aqui
       navigate('/home');
     } else {
       alert('Por favor, preencha todos os campos corretamente.');
@@ -30,27 +22,27 @@ function Register() {
 
   return (
     <div>
-      <AuthNavbar /> 
-      <div className="login-container"> 
-        <form onSubmit={handleSubmit} className="login-form"> 
+      <AuthNavbar />
+      <div className="login-container">
+        <form onSubmit={handleSubmit} className="login-form">
           <div>
             <label className='register-label'>Cadastro</label><br></br> <br></br>
-            <label className="email-label">Email:</label> 
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="email-input" /> 
+            <label className="email-label">Email:</label>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="email-input" />
           </div>
           <div>
             <label className="cpf-label">CPF:</label> 
             <input type="text" value={cpf} onChange={(e) => setCpf(e.target.value)} className="cpf-input" /> 
           </div>
           <div>
-            <label className="password-label">Senha:</label> 
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="password-input" /> 
+            <label className="password-label">Senha:</label>
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="password-input" />
           </div>
           <div>
             <label className="confirm-password-label">Confirmar Senha:</label> 
             <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} className="confirm-password-input" /> 
           </div>
-          <button type="submit" disabled={!email || !cpf || !password || !confirmPassword || password !== confirmPassword} className="submit-button">Cadastrar</button> 
+          <button type="submit" disabled={!email || !cpf || !password || !confirmPassword || password !== confirmPassword} className="submit-button">Cadastrar</button>
         </form>
       </div>
     </div>
