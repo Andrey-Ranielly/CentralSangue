@@ -6,7 +6,7 @@ import RuanFoto from '../../components/img/FotoPerfil.jpeg'
 import AdrielleFoto from '../../components/img/Adrielle.jpeg'
 import LuisFoto from '../../components/img/Luis.png'
 import AndreyFoto from '../../components/img/Andrey.jpeg'
-import PedroFoto from '../../components/img/Pedro.jpg'
+import PedroFoto from '../../components/img/PedroFoto.jpg'
 import './About.css';
 
 const teamMembers = [
